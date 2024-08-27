@@ -35,7 +35,7 @@ export const Contactt = () => {
     setButtonText(t("contactt.sending"));
 
     try {
-      let response = await fetch("https://portfolio-franco-sosa-1.onrender.com/contact", { // Cambiado el puerto a 3001
+      let response = await fetch("http://probando/contact", { // Cambiado el puerto a 3001
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -112,7 +112,7 @@ export const Contactt = () => {
                       <input type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.((com)|(net)|(org)|(hotmail)|(gmail)|(outlook))$"  value={formDetails.email} placeholder={t("contactt.email")} onChange={(e) => onFormUpdate('email', e.target.value)} required />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                    <input type="tel" maxLength="12"  value={formDetails.phone} placeholder={t("contactt.phone")} pattern="[0-9]*"  onChange={(e) => onFormUpdate('phone', e.target.value)} required/>
+                    <input type="tel" maxLength="12"  value={formDetails.phone} placeholder={t("contactt.phone")}onChange={(e) => onFormUpdate('phone', e.target.value)} required/>
                     </Col>
                     <Col size={12} className="px-1">
                       <textarea rows="6" value={formDetails.message} placeholder={t("contactt.message")} onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
