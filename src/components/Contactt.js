@@ -35,7 +35,7 @@ export const Contactt = () => {
     setButtonText(t("contactt.sending"));
 
     try {
-      let response = await fetch("http://probando/contact", { // Cambiado el puerto a 3001
+      let response = await fetch("", { // Cambiado el puerto a 3001
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
