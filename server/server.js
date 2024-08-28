@@ -10,7 +10,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const transport = nodemailer.createTransport({
-  host: 'smtp-mail.outlook.com',
+  service: 'hotmail',  // Cambia el servicio a Hotmail
+  host: 'smtp.live.com',
   port: 587,
   secure: false,
   auth: {
