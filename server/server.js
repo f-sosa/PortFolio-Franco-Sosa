@@ -27,6 +27,11 @@ transport.verify((error) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
+
 app.post('/contact', (req, res) => { // Ruta corregida
   const { firstName, lastName, email, phone, message } = req.body;
 
