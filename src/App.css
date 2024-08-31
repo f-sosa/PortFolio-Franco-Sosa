@@ -1787,6 +1787,8 @@ span.navbar-text {
 .skill{
 
   position: relative;
+  background-image: url('./assets/img/banner-bg.png');
+  background-position: -50px -710px; 
 }
 .skill-bx{
   background: #151515;

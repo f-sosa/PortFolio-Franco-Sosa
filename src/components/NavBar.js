@@ -31,7 +31,7 @@ export const NavBar = () => {
          //Scrollea manualmente para donde quieras que se posicione la seccion skills
         if (value === 'skills') {
             const element = document.getElementById('skills');
-            const offset = -400;  // Ajusta este valor según el espacio que quieras dejar arriba del elemento.
+            const offset = -600;  // Ajusta este valor según el espacio que quieras dejar arriba del elemento.
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
             const offsetPosition = elementPosition + offset;
     
