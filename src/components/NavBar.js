@@ -27,9 +27,23 @@ export const NavBar = () => {
         return () => window.removeEventListener("scroll", onScroll)
     }, []);
 
-    const onUpdateActiveLink = (value) => {
+    const onUpdateActiveLink = (value) => {  
+         //Scrollea manualmente para donde quieras que se posicione la seccion skills
+        if (value === 'skills') {
+            const element = document.getElementById('skills');
+            const offset = -400;  // Ajusta este valor según el espacio que quieras dejar arriba del elemento.
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition + offset;
+    
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',  // Desplazamiento suave.
+            });
+        }
+    
         setActiveLink(value);
-    }
+    };
+    
 
 
     const changeLanguage = (lang) => {
@@ -55,7 +69,7 @@ export const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>{t("navbar.home")}</Nav.Link>
-                        <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>{t("navbar.skills")}</Nav.Link>
+                        <Nav.Link  href="#" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}onClick={(e) => { e.preventDefault(); onUpdateActiveLink('skills');}}>{t("navbar.skills")}</Nav.Link>
                         <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>{t("navbar.projects")}</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
