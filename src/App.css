@@ -36,10 +36,55 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  -background-color: #121212 !important;
+  background-image: url('./assets/img/banner-bg.png');
+  background-size: 100vw 140vh;
+  background-repeat: no-repeat;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
+
+@media (max-width: 860px) {
+  body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    background-image: url('./assets/img/banner-bg.png');
+    background-size: 100vw 140vh;
+    background-repeat: no-repeat;
+    color: #fff !important;
+    font-family: 'Centra', sans-serif !important;
+  }
+}
+@media (max-width: 770px) {
+  body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    background-image: url('./assets/img/banner-bg.png');
+    background-size: 130vw 140vh;
+    background-repeat: no-repeat;
+    color: #fff !important;
+    font-family: 'Centra', sans-serif !important;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #121212 !important;
+    background-image: none; /* Usa 'none' en lugar de 0 para eliminar la imagen de fondo */
+    background-size: 0; /* No es necesario usar 'background-size' aquí si 'background-image' es 'none' */
+    background-repeat: no-repeat;
+    color: #fff !important;
+    font-family: 'Centra', sans-serif !important;
+  }
+}
+
 
 h1, h2, h3, h4, h5, h6 {
 
@@ -1501,7 +1546,7 @@ span.navbar-text {
 .banner {
   margin-top: 0;
   padding: 100px 0 230px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  -background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1578,7 +1623,7 @@ span.navbar-text {
   .banner {
     margin-top: 20px;
     padding: 80px 0 230px 0;
-    background-image: url('./assets/img/banner-bg.png');
+    -background-image: url('./assets/img/banner-bg.png');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1649,7 +1694,7 @@ span.navbar-text {
   .banner {
     margin-top: 20px;
     padding: 80px 0 230px 0;
-    background-image: url('./assets/img/banner-bg.png');
+    -background-image: url('./assets/img/banner-bg.png');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1787,8 +1832,6 @@ span.navbar-text {
 .skill{
 
   position: relative;
-  background-image: url('./assets/img/banner-bg.png');
-  background-position: -50px -710px; 
 }
 .skill-bx{
   background: #151515;
