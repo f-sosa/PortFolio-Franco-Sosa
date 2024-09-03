@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import flecha from "../assets/img/Flecha.PNG"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { useTranslation } from "react-i18next";
@@ -123,6 +124,7 @@ export const Contactt = () => {
               </div>}
             </TrackVisibility>
             <label className="lbl-contact">{t("contactt.meet-title")}</label>
+            <div className="flecha"><img className="br-8" src={flecha} alt="" /></div>         
             <a href="https://calendly.com/francososa1/30min" target="_blank" className="a-meet">{t("contactt.meet")}</a>
           </Col>
         </Row>

@@ -474,6 +474,10 @@ span.navbar-text {
     top: 10px;
     left: 620px;
   }
+  .flecha {
+    position: absolute;
+    margin-left: -50px;
+  }
 }
 
 @media (max-width: 860px) {
@@ -3640,6 +3644,12 @@ span.navbar-text {
   margin-top: 80px;
   margin-left: -100px;
 
+}
+.flecha {
+  position: absolute;
+  width: 250px;
+  top: 590px;
+  left: -60px;
 }
 
 @media (max-width: 860px) {
